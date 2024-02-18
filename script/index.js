@@ -33,7 +33,7 @@ for(const setBtn of setButton){
       
       const seteconomoy = document.getElementById('economoy');
       const p1 = document.createElement('p');
-      p1.innerText='Economoy';
+      p1.innerText='Economy';
       seteconomoy.appendChild(p1);
   
       // set price 550
