@@ -28,24 +28,19 @@ for(const setBtn of setButton){
       const p = document.createElement('p');
       p.innerText =setValue;
        setPlace.appendChild(p);
-
-       // economi
-      const economi = document.getElementsByClassName('economoy').innerText ='Economoy';     
-      const p1= document.createElement('p');
-       p1.innerText=economi;
-       economi.appendChild('p');
       
-     // price
-         const priceIs = document.getElementById('price').innerText ='550';
-         const p2 = document.createElement('p');
-         p2.innerText =priceIs;
-         priceIs.appendChild('p');
-
-
-
-
-
-
+      //  set economoy
+      
+      const seteconomoy = document.getElementById('economoy');
+      const p1 = document.createElement('p');
+      p1.innerText='Economoy';
+      seteconomoy.appendChild(p1);
+  
+      // set price 550
+     const setPrice = document.getElementById('price');
+     const p2 = document.createElement('p');
+       p2.innerText ='550';
+       setPrice.appendChild(p2);
 
 
 
@@ -64,9 +59,115 @@ for(const setBtn of setButton){
     })
 }
 
+
+//   const btn = document.getElementById('apply-button');
+//     btn.addEventListener('click',function(){
+//       // get the value of input
+//       const couponElement = document.getElementById('input-fuld').value;
+//       const couponCode = couponElement.split(" ").join("").toUpperCase();
+//           console.log(couponCode);
+
+//       if(setBtn >= 4){
+//           if(couponCode === "NEW15"){
+//             let price = totalPrice;
+
+//           }
+//       }
+
+//     })
+
+
+// const btn = document.getElementById("apply-btn");
+// btn.addEventListener("click", function () {
+//   //   get the value from input
+//   const couponElement = document.getElementById("input-field").value;
+//   const couponCode = couponElement.split(" ").join("").toUpperCase();
+//   console.log(couponCode);
+//   if (totalPrice >= 200) {
+//     if (couponCode === "SELL200") {
+//       // discount calculation
+//       const discountElement = document.getElementById("discountPrice");
+//       const discountAmount = totalPrice * 0.2;
+//       discountElement.innerText = discountAmount.toFixed(2);
+
+//       //   rest total calculation
+//       const restTotal = document.getElementById("total");
+//       restTotal.innerText = totalPrice - discountAmount.toFixed(2);
+//       document.getElementById("input-field").value = "";
+//     } else {
+//       alert("Invalid Coupone Code");
+//       document.getElementById("input-field").value = "";
+//     }
+//   } else {
+//     alert("Please at least $200 khoroch koren bhai!");
+//     document.getElementById("input-field").value = "";
+//   }
+
+
+
+
  
 
-  
+// let titleCount = 1;
+// let totalPrice = 0;
+// const cards = document.querySelectorAll(".card");
+
+// for (let index = 0; index < cards.length; index++) {
+//   const card = cards[index];
+//   card.addEventListener("click", function () {
+//     // get the title and price value
+//     const title = card.querySelector("h3").innerText;
+//     const price = parseFloat( 
+//       card.querySelector("span").innerText.split(" ")[1]
+//     );
+//     // appending title in the title container
+//     const titleContainer = document.getElementById("title-container");
+//     const p = document.createElement("p");
+//     p.innerText = titleCount + ". " + title; 
+//     titleContainer.appendChild(p);
+//     titleCount++;
+//     // calculate price
+//     totalPrice += price;
+//     document.getElementById("totalPrice").innerText = totalPrice.toFixed(2);
+//   });
+// }
+
+
+
+// const btn = document.getElementById("apply-btn");
+// btn.addEventListener("click", function () {
+//   //   get the value from input
+//   const couponElement = document.getElementById("input-field").value;
+//   const couponCode = couponElement.split(" ").join("").toUpperCase();
+//   console.log(couponCode);
+//   if (totalPrice >= 200) {
+//     if (couponCode === "SELL200") {
+//       // discount calculation
+//       const discountElement = document.getElementById("discountPrice");
+//       const discountAmount = totalPrice * 0.2;
+//       discountElement.innerText = discountAmount.toFixed(2);
+
+//       //   rest total calculation
+//       const restTotal = document.getElementById("total");
+//       restTotal.innerText = totalPrice - discountAmount.toFixed(2);
+//       document.getElementById("input-field").value = "";
+//     } else {
+//       alert("Invalid Coupone Code");
+//       document.getElementById("input-field").value = "";
+//     }
+//   } else {
+//     alert("Please at least $200 khoroch koren bhai!");
+//     document.getElementById("input-field").value = "";
+//   }
+// });
+
+
+
+
+
+
+
+
 
 
 
