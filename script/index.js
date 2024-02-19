@@ -75,53 +75,53 @@ for(const setBtn of setButton){
 //  let couponCode = 'NEW15';
 //  let couponCodeis = "Couple 20";
 // discount part
-      
-  const applyButton = document.getElementById('apply-button');
-   applyButton.addEventListener('click',function(){
-
+       const applyButton = document.getElementById('apply-button');
+          applyButton.addEventListener('click',function(){
 
     const couponElement = document.getElementById("input-fuld").value;
     const couponCode = couponElement.split(" ").join("").toUpperCase();
-     const couponCodeis = couponElement;
-     
+    const couponCodeis = couponElement;
     //  applyButton.style.
 
     //  const coupon= couponCodeis;
     //  console.log(coupon);
     // console.log(couponCode);
     if (totalPrice>= 2200) {
-       if (couponCode === "NEW15") {
-       
-    //   discount calculatio  
-      const discountAmount = totalPrice *15/100;   
-    //   RES TOTAL
-      const restTotal = document.getElementById("grand-total");
-        restTotal.innerText = totalPrice - discountAmount.toFixed(2);
-        document.getElementById("input-fuld").value = "";
+        if (couponCode === "NEW15") {
 
-    }
-    else if(couponCodeis === "Couple 20"){
-        
-           //   discount calculatio  
-             const discountAmount = totalPrice * 20/100;   
-          //   RES TOTAL
-           const restTotal = document.getElementById("grand-total");
+            //   discount calculatio  
+            const discountAmount = totalPrice *15/100;   
+
+            //   RES TOTAL
+            const restTotal = document.getElementById("grand-total");
             restTotal.innerText = totalPrice - discountAmount.toFixed(2);
-             document.getElementById("input-fuld").value = "";
 
-    }
-      else {
-          alert("Invalid Coupone Code");
-          document.getElementById("input-fuld").value = "";
+            document.getElementById("input-fuld").value = "";
+
         }
+        else if(couponCodeis === "Couple 20"){
+            //   discount calculatio  
+            const discountAmount = totalPrice * 20/100;   
 
+            //   RES TOTAL
+            const restTotal = document.getElementById("grand-total");
+            restTotal.innerText = totalPrice - discountAmount.toFixed(2);
 
-   }else(
-    alert('You will get discount if you buy only four seats')
-    // document.getElementById("grand-total")
-    // document.getElementById("input-fuld").value = "";
-   )})
-          
+            document.getElementById("input-fuld").value = "";
+
+        }
+        else {
+            alert("Invalid Coupon Code");
+            document.getElementById("input-fuld").value = "";
+        }
+    }
+    else {
+        alert('You will get a discount if you buy only four seats');
+        // const kire = document.getElementById("input-fuld").value = "";
+        // document.getElementById("grand-total")
+        document.getElementById("input-fuld").value = "";
+    }
+});
 
 
 
