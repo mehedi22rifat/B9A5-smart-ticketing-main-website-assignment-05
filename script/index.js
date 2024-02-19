@@ -2,14 +2,25 @@
  let count =40;
  let setCount = 0;
  let totalPrice =0;
- 
+ let maxSeat = 0
  
  const setButton =document.getElementsByClassName('seet-button')
 for(const setBtn of setButton){
     setBtn.addEventListener('click',function(){
-       setBtn.style.backgroundColor='green';
-       setBtn.style.color='white';
-        
+      //  setBtn.style.backgroundColor='green';
+      //  setBtn.style.color='white';
+      if (maxSeat !== 4) {
+          setBtn.classList.add('bg-green-500');
+          setBtn.classList.add('text-white');
+          maxSeat++;
+      }
+
+       else if (maxSeat == 4) {
+          alert('Sorry you can buy a maximum of four seats');
+          setBtn.setAttribute("disabled")
+
+      } 
+
 
 //  count
        count--;
@@ -55,9 +66,108 @@ for(const setBtn of setButton){
       document.getElementById('grand-total').innerText=totalPrice;
 
 
-
-    })
+})
 }
+
+
+
+
+ let couponCode = 'NEW15';
+ let couponCodeis = "Couple 20";
+// discount part
+      
+  const applyButton = document.getElementById('apply-button');
+   applyButton.addEventListener('click',function(){
+      
+
+    const couponElement = document.getElementById("input-fuld").value;
+    const couponCode = couponElement.split(" ").join("").toUpperCase();
+     const coupon= couponCodeis.slice('').toLocaleUpperCase();
+     console.log(coupon);
+    // console.log(couponCode);
+    if (totalPrice>= 2200) {
+    if (couponCode === "NEW15") {
+       
+    //   discount calculatio  
+      const discountAmount = totalPrice *15/100;   
+    //   RES TOTAL
+      const restTotal = document.getElementById("grand-total");
+        restTotal.innerText = totalPrice - discountAmount.toFixed(2);
+        document.getElementById("input-fuld").value = "";
+
+    }
+    else if(coupon === "Couple 20"){
+        
+           //   discount calculatio  
+             const discountAmount = totalPrice * 20/100;   
+          //   RES TOTAL
+           const restTotal = document.getElementById("grand-total");
+            restTotal.innerText = totalPrice - discountAmount.toFixed(2);
+             document.getElementById("input-fuld").value = "";
+
+    } else {
+          alert("Invalid Coupone Code");
+          document.getElementById("input-fuld").value = "";
+        }
+
+
+   }else(
+    alert('2200 taka khoroc koren vai')
+    // document.getElementById("grand-total")
+    // document.getElementById("input-fuld").value = "";
+   )})
+          
+
+
+
+// // appending title in the title container
+// const titleContainer = document.getElementById("title-container");
+// const p = document.createElement("p");
+// p.innerText = titleCount + ". " + title; 
+// titleContainer.appendChild(p);
+// titleCount++;
+// // calculate price
+// totalPrice += price;
+// document.getElementById("totalPrice").innerText = totalPrice.toFixed(2);
+// });
+// }
+
+// const btn = document.getElementById("apply-btn");
+// btn.addEventListener("click", function () {
+// //   get the value from input
+// const couponElement = document.getElementById("input-field").value;
+// const couponCode = couponElement.split(" ").join("").toUpperCase();
+// console.log(couponCode);
+// if (totalPrice >= 200) {
+// if (couponCode === "SELL200") {
+//   // discount calculation
+//   const discountElement = document.getElementById("discountPrice");
+//   const discountAmount = totalPrice * 0.2;
+//   discountElement.innerText = discountAmount.toFixed(2);
+
+//   //   rest total calculation
+//   const restTotal = document.getElementById("total");
+//   restTotal.innerText = totalPrice - discountAmount.toFixed(2);
+//   document.getElementById("input-field").value = "";
+// } else {
+//   alert("Invalid Coupone Code");
+//   document.getElementById("input-field").value = "";
+// }
+// } else {
+// alert("Please at least $200 khoroch koren bhai!");
+// document.getElementById("input-field").value = "";
+// }
+// });
+
+
+
+
+
+
+
+
+
+
 
 
 //   const btn = document.getElementById('apply-button');
